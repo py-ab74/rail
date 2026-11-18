@@ -1,0 +1,26 @@
+{
+  "log": {
+    "level": "info",
+    "disabled": false
+  },
+  "inbounds": [
+    {
+      "type": "hysteria2",
+      "tag": "hysteria-in",
+      "listen": "0.0.0.0",
+      "listen_port": 443,
+      "users": [
+        {
+          "password": "{@bd*0lI_20-26_P0*0y@}"
+        }
+      ],
+      "masquerade": "https://www.google.com",
+      "tls": {
+        "enabled": true,
+        "alpn": ["h3"],
+        "certificate_path": "/etc/ssl/certs/ssl-cert-snakeoil.pem",
+        "key_path": "/etc/ssl/private/ssl-cert-snakeoil.key"
+      }
+    }
+  ]
+}
